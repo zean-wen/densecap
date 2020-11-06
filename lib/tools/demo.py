@@ -74,7 +74,7 @@ if __name__ == '__main__':
         exit()
     if not os.path.exists(args.vocabulary):
         print('Vocabulary file not exist')
-	exit()
+        exit()
     caffe.set_mode_gpu()
     caffe.set_device(args.gpu_id)
     feature_net = caffe.Net(args.feature_prototxt, caffe.TEST, weights=args.caffemodel)
